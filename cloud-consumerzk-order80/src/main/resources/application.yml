@@ -1,0 +1,14 @@
+#80表示注册到zookeeper服务器的支付服务者提供者端口号
+server:
+  port: 80
+
+
+#服务别名----注册zookeeper到注册中心的名称
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    #注册到zookeeper的地址
+    zookeeper:
+      connect-string: 192.168.31.89:2181    #47.110.248.149
+

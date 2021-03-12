@@ -1,0 +1,17 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-order
+  cloud:
+    consul:
+      host: 47.110.248.149
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        #如果是远程docker服务之间需要开启心跳检查
+        heartbeat:
+          enabled: true
+
+

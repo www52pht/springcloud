@@ -1,0 +1,22 @@
+# consul的服务端口号
+server:
+  port: 8006
+spring:
+  application:
+    name: consul-provider-payment
+
+#consul注册中心地址
+
+  cloud:
+    consul:
+      host: 47.110.248.149
+      port: 8500
+
+      discovery:
+        #服务的名称
+        service-name: ${spring.application.name}
+        #指定开启ip地址注册
+        prefer-ip-address: true
+        #如果是远程docker服务之间需要开启心跳检查
+        heartbeat:
+          enabled: true
